@@ -48,6 +48,24 @@
     
     
   <style>/* force static content visible */.sqs-block-content,.sqs-html-content,.sqs-text-block-container,[data-sqsp-text-block-content]{display:block!important;opacity:1!important;visibility:visible!important;}</style>
+<style>
+/* reveal content-mode wrappers (normally activated by Squarespace JS) */
+.js-content-mode-element-wrapper,.js-content-mode-element{display:block!important;opacity:1!important;visibility:visible!important;}
+.js-content-mode-element-system_mobile{display:none!important;}
+/* drop fluid-engine grid to normal flow so rows don't collapse */
+.fluid-engine{display:block!important;}
+.fluid-engine .fe-block{grid-area:auto!important;width:100%!important;}
+/* let sections grow to content */
+.page-section.section-height--custom,[data-fluid-engine-section]{min-height:auto!important;height:auto!important;}
+</style>
+<script>
+/* swap lazy-loaded data-src to src so images actually load */
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('img[data-src]').forEach(function(img){
+    img.src=img.getAttribute('data-src');
+  });
+});
+</script>
 </head>
 
   <body
