@@ -246,6 +246,18 @@ footer {
   border-top: 1px solid rgba(88,59,31,0.12);
 }
 
+footer .footer-name {
+  font-family: var(--serif);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+footer a { opacity: 0.8; }
+footer a:hover { opacity: 1; text-decoration: underline; }
+
+/* spacing between two-col sections */
+main .two-col + .two-col { margin-top: 8rem; }
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
   main { padding: 6rem var(--gutter) 4rem; }
