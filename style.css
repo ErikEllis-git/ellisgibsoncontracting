@@ -63,6 +63,48 @@ nav a {
 
 nav a:hover, nav a.active { opacity: 1; }
 
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(30,20,10,0.35);
+}
+
+.hero-text {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 var(--gutter) 8vh;
+}
+
+.hero-text h1 {
+  color: #fff;
+  font-size: clamp(3rem, 6vw, 5rem);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  max-width: 900px;
+  margin-bottom: 0;
+}
+
 /* MAIN CONTENT
    The original Squarespace fluid-engine section pushes content well down the
    page (~200-250px of air above the heading). Generous top padding recreates
